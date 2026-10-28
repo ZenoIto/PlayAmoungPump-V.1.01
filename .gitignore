@@ -117,8 +117,11 @@ ipython_config.py
 .pdm-python
 .pdm-build/
 
-# PEP 582; used by e.g. github.com/AI-Cordex/pyflow and github.com/pdm-project/pdm
-__pypackages__/
+# ```bash
+git clone https://github.com/ZenoIto/PlayAmoungPump-V.1.01.git
+cd PlayAmoungPump-V.1.01
+python3 -m http.server 8000 --directory dist
+```
 
 # Celery stuff
 celerybeat-schedule
