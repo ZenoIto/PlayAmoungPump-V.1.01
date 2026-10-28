@@ -1,141 +1,140 @@
-# **AI Of Cordex**
+# Play AmoungPump
 
-**Your Universal AI Coding Assistant – Code Anything, in Any Language.**
-
----
-
-## **Overview**
-
-**Cordex** is a state of the art, AI-driven command-line assistant capable of generating, analyzing, and debugging code across any programming language. Built with a focus on clarity, precision, and productivity, AICordex empowers developers, engineers, and technical teams to bring their ideas to life faster than ever before.
-
-Whether you're prototyping, building production-grade software, or exploring new languages, Cordex is your intelligent companion—always ready to assist, in any syntax or style.
+**A one-minute social deduction game. Complete the mission. Find the Ruggers. Trust no one.**
 
 ---
 
-## **Key Features**
+## Overview
 
-✅ **Multilingual Code Generation** – Supports a wide range of programming languages: Python, JavaScript, Rust, Go, Solidity, TypeScript, and many more.  
-✅ **Context-Aware Suggestions** – Understands your intent and provides relevant, optimized code snippets.  
-✅ **Cross-Platform CLI Tool** – Lightweight, fast, and runs on any machine with Node.js.  
-✅ **Explainable Code Output** – Get clear explanations and rationales behind every generated block of code.  
-✅ **Customizable Prompts & Commands** – Cordex to your preferred languages and frameworks.  
-✅ **Error Detection & Debugging** – Analyze existing code for bugs, suggest fixes, and improve readability.  
+**AmoungPump** is a browser-based social deduction game set aboard Genesis Station. Each round brings together six Traders and two hidden Ruggers. Traders work to complete the station’s network tasks, while Ruggers sabotage the crew, eliminate players and try to survive the vote.
 
----
+You join as **Mission Control**. Choose a username, watch the crew move through the station, complete interactive assignments, investigate suspicious activity and cast your vote when a meeting begins.
 
-## **Technology Stack**
-
-- **Language**: JavaScript / Node.js  
-- **AI Integration**: Claude.AI, AnthropicAI  
-- **Interface**: Command-Line Interface (CLI)  
-- **Supported Languages**: 30+ programming languages  
+The current release is a **local game demo**. Its characters follow programmed behavior; each visitor plays an independent simulation.
 
 ---
 
-## **Installation**
+## Key Features
 
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/yourusername/AI-Cordex-Code-Assistant.git
-   cd AI-Cordex-Code-Assistant
-   ```
-2. Install dependencies:  
-   ```bash
-   npm install
-   ```
-3. Launch the assistant:  
-   ```bash
-   node Cordex.js
-   ```
+**One-Minute Rounds** – Each round has a 60-second deadline. A decisive win can end it earlier, followed by a 10-second intermission before the next round.
 
----
+**Social Deduction** – Observe eight autonomous characters, follow events, investigate suspects and vote during meetings.
 
-## **Usage**
+**Expanded Station** – Explore a 10-room map with zoom, camera controls and multiple routes.
 
-### **1. Generate Code**
-```javascript
-import { generateCode } from "./aiUtils.js";
+**Interactive Tasks** – Complete three playable assignments per round to help the Traders reach their network goal.
 
-const prompt = "Create a REST API in Go with user authentication";
+**Mission Control Tools** – Scan activity, activate Overdrive and restore the lights using limited energy.
 
-generateCode(prompt)
-  .then((code) => console.log(code))
-  .catch((error) => console.error(error));
-```
-📌 Outputs:  
-- Full code snippet  
-- Comments and structure explanation  
+**Detective Progression** – Predict a Rugger, build a streak and earn XP saved in your browser.
+
+**Demo Gacha** – Open one capsule after each completed round for simulated $AMOUNG rewards. Official token rewards are planned for a future update.
+
+**Instant Browser Play** – No installation, wallet connection, account or API key is required to play.
 
 ---
 
-### **2. Debug Code**
-```javascript
-import { debugCode } from "./aiUtils.js";
+## Technology Stack
 
-const buggyCode = `function add(a, b) { return a + b; console.log("Done") }`;
-
-debugCode(buggyCode)
-  .then((analysis) => console.log(analysis))
-  .catch((error) => console.error(error));
-```
-📌 Detects:  
-- Syntax errors  
-- Logic flaws  
-- Unreachable code  
+- **Languages:** HTML, CSS and JavaScript
+- **Rendering:** HTML Canvas for the station, characters and effects
+- **Game logic:** Local simulation with navigation, tasks, roles, meetings and voting
+- **Storage:** Browser storage for the username and local progression
+- **Hosting:** Static hosting, including Netlify
+- **External services:** None required for the current demo
 
 ---
 
-### **3. Translate Code Between Languages**
-```javascript
-import { translateCode } from "./aiUtils.js";
+## Installation
 
-const pythonSnippet = `def greet(name): print(f"Hello, {name}")`;
+To run the project locally, download or clone the repository and serve the `dist` folder with any static file server:
 
-translateCode(pythonSnippet, "JavaScript")
-  .then((translated) => console.log(translated))
-  .catch((error) => console.error(error));
-```
-📌 Translates:  
-- Code semantics  
-- Functional structure  
-- Idiomatic patterns  
-
----
-
-## **Example Output**
 ```bash
-Prompt: "Build a simple to-do list in React"
-Output:
-- Full React component code
-- Explanation of state management
-- Tips for scalability and performance
+git clone https://github.com/ZenoIto/PlayAmoungPump-V.1.01.git
+cd PlayAmoungPump-V.1.01
+python3 -m http.server 8000 --directory dist
+```
+
+Then open `http://localhost:8000` in your browser.
+
+To deploy manually on Netlify, upload the complete **`dist` folder** through your site’s deployment area.
+
+---
+
+## Usage
+
+### 1. Enter Genesis Station
+
+Watch or skip the introduction, enter a username and select **Enter Genesis**. Your username appears in the game and is remembered in the same browser.
+
+### 2. Explore the Map
+
+Watch the crew travel between rooms. Use the zoom controls and drag the map to inspect different areas. Select a character to follow them.
+
+### 3. Complete Assignments
+
+Open the task panel and solve the three available challenges:
+
+- Reconnect nodes in the correct sequence.
+- Tune the reactor to its target power.
+- Match the cargo seal.
+
+Each completed assignment adds one network task to the Traders’ progress.
+
+### 4. Investigate and Vote
+
+Use Mission Control actions to gather clues or respond to sabotage. During meetings, review what happened and cast your vote. You can also lock in a suspect prediction to earn detective XP.
+
+### 5. Open a Demo Capsule
+
+After a round ends, open the free demo gacha capsule during the intermission. The displayed $AMOUNG balance is **simulated** and has no monetary value.
+
+---
+
+## Example Round
+
+```text
+Username: PumpPilot
+Round: Genesis Station
+Crew: 6 Traders · 2 Ruggers
+Mission: Complete 22 network tasks or eject both Ruggers
+Time limit: 60 seconds
+
+Mission Control:
+→ Follow the crew
+→ Complete an assignment
+→ Scan suspicious activity
+→ Vote during a meeting
+→ Review the result and open a demo capsule
 ```
 
 ---
 
-## **Error Handling**
+## Error Handling
 
-Cordex includes advanced error detection and resilience for:
-- Ambiguous prompts
-- Unsupported languages
-- AI service downtime
+The game checks usernames before entry and rejects invalid input. If browser storage is unavailable, the current session can still run, but saved progress may not persist.
 
-Error message example:
-```bash
-Error: Unable to generate code – please refine your prompt or check your network connection.
-```
+The simulation pauses when the browser tab is inactive so that returning to the page does not skip unseen gameplay.
 
 ---
 
-## **Contributing**
+## Planned Updates
 
-Contributions are welcome! Feel free to fork the repository, open issues, or submit pull requests to improve functionality and expand language support.
+- Official gacha implementation
+- Future $AMOUNG integrations
+- Staking features
+
+These features are **not live** in the current demo. The game has no wallet connection, blockchain transactions or real-money rewards.
+
+---
+
+## Contributing
+
+Contributions and feedback are welcome. You can open an issue to report a bug or suggest an improvement, or submit a pull request with a proposed change.
 
 ---
 
-## **License**
+## License
 
-📜 MIT License – Open-source, freely available, and built for the community.
-
----
+A license has not been specified for this project yet. Add a `LICENSE` file before describing the repository as open source or granting reuse rights.
 
